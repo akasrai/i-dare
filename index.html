@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Funtastic Friday</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aladin&family=Gamja+Flower&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <script src="./js/participient.js"></script>
+    <script src="./js/question.js"></script>
+    <script src="./js/script.js"></script>
+  </head>
+  <body>
+    <canvas id="fireworks" width="1366" height="800"></canvas>
+
+    <header>
+      <div class="logo mb-4">
+        <img src="./img/logo_machnet.svg" />
+      </div>
+      <h1 class="mt-5">Welcome to Funtastic Friday!!!</h1>
+      <h1 id="wish">Happy New Year 2077!!!</h1>
+    </header>
+
+    <div class="container mb-5 mt-5 pt-5">
+      <div class="col-md-9 text-center m-auto">
+        <div class="profile-pic-wrapper hide">
+          <div class="profile-pic">
+            <img id="profile-pic" />
+          </div>
+        </div>
+
+        <p class="h1 text-center text-white" id="person">
+          Are you Ready? 🤘
+        </p>
+
+        <p class="m-auto col-1 text-center" id="con">.</p>
+        <div class="col-md-12 m-auto mt-2 row text-center">
+          <div class="hide" id="ques-board">
+            <div class="h5 p-3 text-white text-center col-md-12 m-0">
+              Please choose the number.
+            </div>
+            <div id="ques-options" class="col-md-12 m-auto row"></div>
+          </div>
+
+          <span
+            id="question"
+            class="h2 col-md-12 text-center text-white hide rounded border p-3 m-3"
+          ></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 buttons m-auto row">
+      <button
+        id="btn-choose-person"
+        onclick="getRandomPerson()"
+        class="btn btn-outline-warning col-md-5 m-0 m-auto"
+      >
+        Get Random Person
+      </button>
+
+      <div class="col-md-12 hide" id="btn-ques">
+        <button
+          id="btn-choose-question"
+          onclick="getSelectedQuestion()"
+          class="btn btn-outline-warning col-md-5 m-0 m-auto"
+        >
+          Confirm
+        </button>
+        <button
+          id="btn-skip"
+          onclick="skipPerson()"
+          class="btn btn-outline-warning col-md-5 m-0 m-auto"
+        >
+          Skip
+        </button>
+      </div>
+    </div>
+    <div class="m-4"></div>
+
+    <script src="./js/fireworks.js"></script>
+    <script src="./js/dom-confetti.js"></script>
+    <script src="./js/blast.js"></script>
+  </body>
+</html>
